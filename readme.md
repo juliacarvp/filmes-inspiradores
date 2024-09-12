@@ -1,4 +1,4 @@
-# Plataforma de Filmes Inspiradores: O Refúgio dos Filmes que Transformam Vidas!
+# Plataforma de Filmes Inspiradores
 
 A Plataforma de Filmes Inspiradores é um espaço dedicado à exploração e descoberta de filmes que inspiram e transformam vidas. Se você é apaixonado por filmes ou alguém que busca um pouco de inspiração, este site foi feito para você. Através de uma interface intuitiva e interativa, os usuários podem pesquisar filmes, explorar categorias diversas e visualizar informações apresentadas sobre cada filme. A plataforma é responsiva, garantindo uma experiência fluida em diferentes dispositivos.
 
