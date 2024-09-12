@@ -1,0 +1,402 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E0F2F1;
+    color: #004D40;
+    line-height: 1.6;
+}
+
+/* Banner */
+.banner {
+    position: relative;
+    background-image: url('https://images.pexels.com/photos/1309687/pexels-photo-1309687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-size: cover;
+    background-position: center;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+}
+
+.banner {
+    background-attachment: fixed;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 1;
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.banner-content:hover {
+    transform: translateY(-10px);
+}
+
+.banner-content h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.banner-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #DDDDDD;
+}
+
+.banner-content .search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botão de pesquisa */
+.banner-content input[type="text"] {
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 2px solid #ed74b7;
+    border-radius: 20px 0 0 20px;
+    width: 350px;
+    transition: border-color 0.3s, transform 0.3s;
+    outline: none;
+}
+
+.banner-content button.search-button {
+    background: linear-gradient(45deg, #ff4081, #ed74b7);
+    color: #FFFFFF;
+    border: 2px solid #ff4081;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.banner-content button.search-button:hover {
+    background: linear-gradient(45deg, #ed74b7, #ff4081);
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 48px;
+    cursor: pointer;
+}
+
+/* Efeito seta animada */
+.seta-container {
+    margin-top: 40px;
+}
+
+.seta {
+    width: 32px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(6px);
+    }
+}
+
+/* Categorias */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #F1F8F6;
+}
+
+.category-card {
+    background: #FFFFFF;
+    padding: 30px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 12px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 2px solid transparent;
+    overflow: hidden;
+}
+
+.category-card:hover {
+    transform: translateY(-10px) rotate(-1deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    border-color: #ff4081;
+}
+
+.category-card h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 24px;
+    color: #1E1B26;
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    color: #00796B;
+    font-size: 16px;
+}
+
+/* Seção de Resultado */
+.result {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 60px 40px;
+    background-color: #F1F8F6;
+}
+
+.movie {
+    background: #FFFFFF;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.movie:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.movie-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.movie-info {
+    padding: 20px;
+    color: #333333;
+}
+
+.movie-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.movie-info p {
+    font-size: 1rem;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+.more-info {
+    color: #ff4081;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more-info:hover {
+    text-decoration: underline;
+}
+
+/* Seção de Filmes */
+.films-section {
+    padding: 60px 40px;
+    background-color: #F1F8F6;
+    gap: 40px;
+}
+
+.films-section .title-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.films-section .title-container h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #004D40;
+    margin-bottom: 20px;
+}
+
+.films-section .title-container .back-button {
+    font-size: 1.25rem;
+    color: #004D40;
+    background: #E0F2F1;
+    border: 2px solid #004D40;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.films-section .title-container .back-button:hover {
+    background: #004D40;
+    color: #FFFFFF;
+}
+
+.films-section .films-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.films-section .films-list .film-item {
+    font-size: 1.25rem;
+    color: #00796B;
+}
+
+.film-item p {
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.film-item p:hover {
+    color: #ff4081;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #004D40;
+    color: #FFFFFF;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1rem;
+    border-top: 3px solid #FF4081;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #FF74B7;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline; 
+}
+
+/* Estilo inicial para a seção de categorias */
+#categories-section {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Esconder a seção de categorias */
+#categories-section.hide {
+    opacity: 0;
+    display: none;
+}
+
+/* Esconder a seção de resultado */
+#result.hide {
+    opacity: 0;
+    display: none;
+}
+
+/* Esconder a seção de filmes */
+.films-section.hide {
+    opacity: 0;
+    display: none;
+}
+
+.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    .banner {
+        height: 50vh;
+    }
+
+    .banner-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .banner-content p {
+        font-size: 1.25rem;
+    }
+
+    .banner-content input[type="text"] {
+        width: 250px;
+    }
+
+    .seta-container {
+        display: none;
+    }
+
+    .result {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 55vh;
+        padding: 10px;
+    }
+
+    .banner-content h1 {
+        font-size: 2.0rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .banner-content input[type="text"] {
+        width: 200px;
+    }
+
+    .films-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .icon-item {
+        justify-content: center;
+    }
+
+    .result {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

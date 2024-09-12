@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/lotus.ico" type="image/x-icon">
+    <title>Histórias Inspiradoras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@400;700&family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/985a554ad9.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <!-- Banner Principal -->
+     <main>
+        <section class="banner">
+            <div class="logo">
+                <img src="assets/img/lotus.png" alt="Logo">
+            </div>
+            <div class="banner-content">
+                <h1>Histórias que Inspiram</h1>
+                <p>Descubra filmes que emocionam e transformam.</p>
+                <div class="search-form">
+                    <input type="text" placeholder="Digite o nome do filme ou palavra-chave" id="search-field">
+                    <button class="search-button" onclick="pesquisar(); hideResult()">Pesquisar</button>
+                </div>
+                <div class="seta-container">
+                    <img src="assets/img/seta-para-baixo.png" alt="Descer" class="seta">
+                </div>
+            </div>
+        </section>
+     </main>
+
+    <!-- Seção de Resultado -->
+    <section class="result hide" id="result">
+    </section>
+
+    <!-- Seção de Categorias -->
+    <section class="categories" id="categories-section">
+        <div class="category-card" id="overcoming-category">
+            <h3>Superação</h3>
+            <p>Filmes sobre superação e conquistas pessoais.</p>
+        </div>
+        <div class="category-card" id="impact-category">
+            <h3>Impacto Social</h3>
+            <p>Filmes que destacam mudanças sociais e impacto.</p>
+        </div>
+        <div class="category-card" id="innovation-category">
+            <h3>Inovação</h3>
+            <p>Filmes que exploram inovações e transformações.</p>
+        </div>
+    </section>
+
+    <!-- Seção de Filmes -->
+    <section class="films-section hide overcoming-films">
+        <div class="title-container">
+            <h2>Filmes de Superação</h2>
+            <a href="#" class="back-button">Voltar</a>
+        </div>
+        <div class="films-list">
+            <div class="film-item">
+                <p>À Procura da Felicidade</p>
+            </div>
+            <div class="film-item">
+                <p>Até o Último Homem</p>
+            </div>
+            <div class="film-item">
+                <p>O Lado Bom da Vida</p>
+            </div>
+        </div>
+        <div class="icon-item">
+            <i class="fa-solid fa-film" style="color: #004d40; font-size: 3rem;"></i>
+        </div>
+    </section>
+
+    <section class="films-section hide impact-films">
+        <div class="title-container">
+            <h2>Filmes de Impacto Social</h2>
+            <a href="#" class="back-button">Voltar</a>
+        </div>
+        <div class="films-list">
+            <div class="film-item">
+                <p>O Menino que Descobriu o Vento</p>
+            </div>
+            <div class="film-item">
+                <p>A Cor Púrpura</p>
+            </div>
+            <div class="film-item">
+                <p>O Jogo da Imitação</p>
+            </div>
+        </div>
+        <div class="icon-item">
+            <i class="fa-solid fa-film" style="color: #004d40; font-size: 3rem;"></i>
+        </div>
+    </section>
+
+    <section class="films-section hide innovation-films">
+        <div class="title-container">
+            <h2>Filmes de Inovação</h2>
+            <a href="#" class="back-button">Voltar</a>
+        </div>
+        <div class="films-list">
+            <div class="film-item">
+                <p>A Rede Social</p>
+            </div>
+            <div class="film-item">
+                <p>A Teoria de Tudo</p>
+            </div>
+            <div class="film-item">
+                <p>Fome de Poder</p>
+            </div>
+        </div>
+        <div class="icon-item">
+            <i class="fa-solid fa-film" style="color: #004d40; font-size: 3rem;"></i>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2024 Histórias que Inspiram. Todos os direitos reservados.</p>
+        <p><a href="#">Política de Privacidade</a> | <a href="#">Termos de Serviço</a></p>
+    </footer>
+
+    <script src="assets/js/dados.js"></script>
+    <script src="assets/js/app.js"></script>
+
+</body>
+
+</html>
