@@ -22,9 +22,6 @@ body {
     flex-direction: column;
     text-align: center;
     overflow: hidden;
-}
-
-.banner {
     background-attachment: fixed;
 }
 
@@ -373,6 +370,7 @@ footer a:hover {
     .banner {
         height: 55vh;
         padding: 10px;
+        background-attachment: scroll;
     }
 
     .banner-content h1 {
